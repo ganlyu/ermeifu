@@ -7,6 +7,7 @@
       <div class="footer-logo">
         <img class="img" src="@/assets/img/logo.jpg">
       </div>
+      <div><el-backtop :right="100" :bottom="100" /></div>
       <div class="footer-info">
         <div class="footer-address">
           <span>全球服务热线：{{ tel }}</span>

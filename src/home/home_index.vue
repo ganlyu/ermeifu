@@ -61,14 +61,21 @@
 </template>
 
 <script>
+import VueDeviceDetector from 'vue-device-detector';
 import config from '@/config.js'
+
 export default {
   data() {
     return {
+      is_phone: false,
       souce: config.text_souce, text_detail: config.text_detail, index_button_title: config.index_button_title, text_detail2: config.text_detail2, list: config.log_list, goods_items: config.goods_items,
       goods_type: config.goods_type,
       address_title: config.address_title
     }
+  },
+  created() {
+    // '是否是移动端'
+    this.is_phone = VueDeviceDetector.isMobile
   },
   methods: {
     onClick() {
